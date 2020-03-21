@@ -1,5 +1,5 @@
-from LinkedList import LinkedList
-
+from LinkedList import *
+# change from LinkedList to from LinkedListBlank
 
 def tests():
     print("\nTesting linked lists")

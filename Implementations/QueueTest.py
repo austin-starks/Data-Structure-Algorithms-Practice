@@ -1,4 +1,6 @@
-from Queue import QueueArray
+from Queue import *
+# change from Queue to from QueueBlank
+
 
 def tests():
   q = QueueArray(1)
