@@ -12,14 +12,12 @@ import LinkedListTest
 # -	Big-O for lookup: 
 # -	Example use: 
 
-
 # •	Linked List Description: 
 # -	Big-O for insert:
 # -	Big-O for delete: 
 # -	Big-O for lookup: 
 # -	Example use:
 # -	Implementation: 
-
 
 # •	Stack Description:
 # -	Big-O for insert:
@@ -32,12 +30,18 @@ import LinkedListTest
 # -	Big-O for insert:
 # -	Big-O for delete:
 # -	Big-O for lookup:
-# -	Implementation link (include pop and push):
+# -	Implementation link (include queue and enqueue):
 # -	Example use:
 
 # •	Tree Description:
 # -	Tree height definition:
 # -	Tree depth definition:
+# -	Big-O for insert:
+# -	Big-O for delete:
+# -	Big-O for lookup:
+# -	Implementation link:
+
+# •	Trie Description:
 # -	Big-O for insert:
 # -	Big-O for delete:
 # -	Big-O for lookup:
@@ -107,9 +111,6 @@ import LinkedListTest
 # -	How do sockets work?
 # -	What is IP?
 # -	What are the networking layers?
-
-
-# Test suite
 
 
 if __name__ == '__main__':
