@@ -115,3 +115,5 @@ import LinkedListTest
 
 if __name__ == '__main__':
     LinkedListTest.tests()
+    # StackTest.tests()
+    # QueueTest.tests()
