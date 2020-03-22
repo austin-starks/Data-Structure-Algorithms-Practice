@@ -26,8 +26,8 @@ def tests():
   print("isEmpty test is complete")
   print("Linked List Stack tests complete\n")
 
-  print("\nTesting LinkedList Array")
-  s = LinkedListArray(5)
+  print("\nTesting Stack Array")
+  s = StackArray(5)
   print("Testing peek")
   assert s.peek()==5, "Peek should be 5"
   print("Peek test complete")
