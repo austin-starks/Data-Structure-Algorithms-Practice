@@ -19,6 +19,6 @@ def tests():
   c2.add_child(-1)
   assert t.height() == 4
   print("Tree height complete")
-  print("Tree test complete")
+  print("Tree test complete\n")
   
 

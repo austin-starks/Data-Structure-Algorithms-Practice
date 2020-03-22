@@ -23,6 +23,6 @@ def tests():
   assert not trie.contains_prefix("skittless")
   assert not trie.contains_prefix("skitttles")
   print("Contains substring test complete")
-  print("Tries tests complete")
+  print("Tries tests complete\n")
 
 
