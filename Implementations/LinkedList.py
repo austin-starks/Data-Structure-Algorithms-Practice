@@ -1,11 +1,30 @@
-class Node(object):
+class LinkedListNode(object):
+    """
+    A node for a Singly Linked List
+
+    This node is used to implement a LinkedList. It contains the data and 
+    a pointer to the next node.
+
+    Class invariants: 
+        - self._data:     the data to store in the LinkedList 
+        - self._nextNode: the Node this Node points to
+    """
     def __str__(self):
+        """
+        Returns: The string representation of this Node
+        """
         return "[" + str(self._data) + "]"
 
     
     def __init__(self, data):
         """
-        Initalizes a node 
+        Initalizes a node for a Linked List
+
+        This Node stores data and also the next node
+        
+        Class invariants: 
+            - self._data:     the data to store in the LinkedList 
+            - self._nextNode: the Node this Node points to
         """
         self._data = data
         self._nextNode = None
@@ -13,14 +32,14 @@ class Node(object):
     
     def getData(self):
         """
-        Returns the data in the node
+        Returns: the data in this LinkedListNode
         """
         return self._data
 
     
     def getNextNode(self):
         """
-        Returns the next node
+        Returns: the node stored in the next node.
         """
         return self._nextNode
 
@@ -28,17 +47,48 @@ class Node(object):
     def setNextNode(self, node):
         """
         Sets the next node to be node
+
+        This function changes the next Node to be node
+
+        Parameter node: the node to set to be this node's next node.
         """
-        if isinstance(node, Node) or node is None:
+        if isinstance(node, LinkedListNode) or node is None:
             self._nextNode = node
         else:
-            self._nextNode = Node(node)
+            self._nextNode = LinkedListNode(node)
 
 
 class LinkedList(object):
+    """
+    A class representing a linked list.
+
+    This class implements a linked list, including functions such as insert, 
+    delete, size, and find.
+
+    Class invariants:
+        - self._head: the node at the head of the LinkedList.
+        - self._size: the size of the LinkedList
+    """
+    def __init__(self, head=None):
+        """
+        Initializes a linked list
+
+        A linked list is a structure that contains a head that is a LinkedListNode 
+        and a size attribute.
+
+        Class invariants:
+            - self._head: the node at the head of the LinkedList.
+            - self._size: the size of the LinkedList        
+        """
+        if isinstance(head, LinkedListNode):
+            self._head = head
+        else:
+            self._head = LinkedListNode(head) 
+        self._size = 1
+
     def __str__(self):
         """
-        Prints the string representation of the linked list. Used for printing
+        Returns: the string representation of the linked list
         """
         currentNode = self._head
         string = ""
@@ -49,26 +99,20 @@ class LinkedList(object):
                 string += " -> "
         return string
 
-
-    def __init__(self, head=None):
-        """
-        Initializes a linked list
-        """
-        if isinstance(head, Node):
-            self._head = head
-        else:
-            self._head = Node(head) 
-        if head==None:
-            self._size = 0 
-        else:
-            self._size = 1
-
     
     def insert(self, data):
         """
         Adds a new data value to the linked list
+
+        This function creates a new node and adds it to the beginning of the 
+        Linked List.
+
+        Parameter data: the data to add 
         """
-        newNode = Node(data)
+        if isinstance(data, LinkedListNode):
+            newNode = data 
+        else:
+            newNode = LinkedListNode(data)
         newNode.setNextNode(self._head)
         self._head = newNode
         self._size += 1
@@ -83,7 +127,12 @@ class LinkedList(object):
    
     def find(self, value):
         """
-        Returns: the node with value 
+        Finds the first node that has value on its data. 
+
+        This function iterates through the Linked List to find a node with 
+        value in its data. If it doesn't exist, this function returns None.
+
+        Returns: the LinkedListNode with value as its data or None 
         """
         currentNode = self._head
         while currentNode != None and currentNode.getData() != value:
@@ -97,6 +146,9 @@ class LinkedList(object):
     def delete(self, value):
         """
         Deletes the value from the linked list
+
+        This function iterates through the linked list and deletes the first 
+        node with value in its data. 
         """
         currentNode = self._head
         prevNode = None
