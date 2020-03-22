@@ -18,18 +18,18 @@ class TrieNode(object):
          |
         ***
 
-  Class invariant:
-    - self.data: the data that this TrieNode stores (or the empty string if no data)
-    - self.char: the character this TrieNode encodes for (or * if the root)
-    - self.children: the children characters for this node (and *** if the path 
-                      to this node is a complete word.)
-    - self.parent: the parent to this Node (or None if this is the root node)
+Class invariant:
+  - self.data: the data that this TrieNode stores (or the empty string if no data)
+  - self.char: the character this TrieNode encodes for (or * if the root)
+  - self.children: the children characters for this node (and *** if the path 
+                    to this node is a complete word.)
+  - self.parent: the parent to this Node (or None if this is the root node)
 
-  Resources on tries: 
-    - https://en.wikipedia.org/wiki/Trie
-    - https://towardsdatascience.com/implementing-a-trie-data-structure-in-python-in-less-than-100-lines-of-code-a877ea23c1a1
-    - https://www.youtube.com/watch?v=zIjfhVPRZCg
-    - https://www.youtube.com/watch?v=o6563NNbdtg 
+Resources on tries: 
+  - https://en.wikipedia.org/wiki/Trie
+  - https://towardsdatascience.com/implementing-a-trie-data-structure-in-python-in-less-than-100-lines-of-code-a877ea23c1a1
+  - https://www.youtube.com/watch?v=zIjfhVPRZCg
+  - https://www.youtube.com/watch?v=o6563NNbdtg 
   """
   def __init__(self, data = ""):
     """
