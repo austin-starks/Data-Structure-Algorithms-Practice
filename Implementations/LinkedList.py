@@ -6,14 +6,14 @@ class LinkedListNode(object):
     a pointer to the next node.
 
     Class invariants: 
-        - self._data:     the data to store in the LinkedList 
-        - self._nextNode: the Node this Node points to
+        - self.data:     the data to store in the LinkedList 
+        - self.next: the Node this Node points to
     """
     def __str__(self):
         """
         Returns: The string representation of this Node
         """
-        return "[" + str(self._data) + "]"
+        return "[" + str(self.data) + "]"
 
     
     def __init__(self, data):
@@ -23,27 +23,12 @@ class LinkedListNode(object):
         This Node stores data and also the next node
         
         Class invariants: 
-            - self._data:     the data to store in the LinkedList 
+            - self.data:     the data to store in the LinkedList 
             - self._nextNode: the Node this Node points to
         """
-        self._data = data
-        self._nextNode = None
+        self.data = data
+        self.next = None
 
-    
-    def getData(self):
-        """
-        Returns: the data in this LinkedListNode
-        """
-        return self._data
-
-    
-    def getNextNode(self):
-        """
-        Returns: the node stored in the next node.
-        """
-        return self._nextNode
-
-    
     def setNextNode(self, node):
         """
         Sets the next node to be node
@@ -53,9 +38,9 @@ class LinkedListNode(object):
         Parameter node: the node to set to be this node's next node.
         """
         if isinstance(node, LinkedListNode) or node is None:
-            self._nextNode = node
+            self.next = node
         else:
-            self._nextNode = LinkedListNode(node)
+            self.next = LinkedListNode(node)
 
 
 class LinkedList(object):
@@ -94,7 +79,7 @@ class LinkedList(object):
         string = ""
         while currentNode != None:
             string += str(currentNode)
-            currentNode = currentNode.getNextNode()
+            currentNode = currentNode.next
             if currentNode != None:
                 string += " -> "
         return string
@@ -135,8 +120,8 @@ class LinkedList(object):
         Returns: the LinkedListNode with value as its data or None 
         """
         currentNode = self._head
-        while currentNode != None and currentNode.getData() != value:
-            currentNode = currentNode.getNextNode()
+        while currentNode != None and currentNode.data != value:
+            currentNode = currentNode.next
         if currentNode is None:
             return None
         else:
@@ -152,14 +137,14 @@ class LinkedList(object):
         """
         currentNode = self._head
         prevNode = None
-        while currentNode != None and currentNode.getData() != value:
+        while currentNode != None and currentNode.data != value:
             prevNode = currentNode
-            currentNode = currentNode.getNextNode()
+            currentNode = currentNode.next
         if currentNode == None:
             return
         else:  # that means currentNode == value
             if prevNode == None:  # that means the first item is deleted
-                self._head = currentNode.getNextNode()
+                self._head = currentNode.next
             else:
-                prevNode.setNextNode(currentNode.getNextNode())
+                prevNode.setNextNode(currentNode.next)
             self._size -= 1

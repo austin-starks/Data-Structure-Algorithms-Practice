@@ -15,9 +15,9 @@ def tests():
     print("Size test Complete")
     print("Test find")
     node = l.find(5)
-    assert node.getData() == 5, "The node should be 5"
+    assert node.data == 5, "The node should be 5"
     node = l.find(1)
-    assert node.getData() == 1, "The node should be 1"
+    assert node.data == 1, "The node should be 1"
     node = l.find(8)
     assert node == None, "The node should be None"
     print("Find test complete")
