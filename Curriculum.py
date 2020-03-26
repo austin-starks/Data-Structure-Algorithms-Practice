@@ -5,6 +5,7 @@ import StackTest
 import QueueTest
 import TreeTest
 import TrieTest
+import BSTTest
 
 
 # Curriculum
@@ -138,4 +139,6 @@ if __name__ == '__main__':
     QueueTest.tests()
     TreeTest.tests()
     TrieTest.tests()
+    BSTTest.tests()
+
     
