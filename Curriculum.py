@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(1, "Implementations")
+sys.path.insert(1, "implementations_python")
 import LinkedListTest
 import StackTest
 import QueueTest
@@ -11,13 +11,6 @@ import BSTTest
 # Curriculum
 
 # Data Structures
-# •	Arrays Description: An array is a data structure that stores a collection
-# of data; each data point being identified by an index
-# -	Big-O for insert: O(n)
-# -	Big-O for delete: O(n)
-# -	Big-O for lookup: O(1) (O(n) to find the data point, but O(1) if you know index)
-# -	Example use: To implement a matrix
-
 # •	Linked List Description: A collection of data whose order is given by the
 # element it points to. Each node point contains data and the next value
 # -	Big-O for insert: O(1) (to insert; looking up is still O(n) )
@@ -64,72 +57,18 @@ import BSTTest
 #   a lot of space.
 # -	Implementation link: Trie.py
 
-
-# •	Binary Search Tree Description:
-# -	Big-O for insert:
-# -	Big-O for delete:
-# -	Big-O for lookup:
-# -	Implementation link (include insert and delete):
-# -	Example use:
-
-# •	Heap Description:
-# -	Big-O for insert:
-# -	Big-O for delete:
-# -	Big-O for lookup:
-# -	Implementation link:
-# -	Example use:
-
-# •	Hash Table Description:
-# -	Big-O for insert:
-# -	Big-O for delete:
-# -	Big-O for lookup:
-# -	The collision methods are:
-# -	Implementation link:
-# -	Example use:
-
-# •	Hash Set Description:
-# -	Big-O for insert:
-# -	Big-O for delete:
-# -	Big-O for lookup:
-# -	Implementation link:
-# -	Example use:
-
-# •	Linked Hash Map Description:
-# -	Big-O for insert:
-# -	Big-O for delete:
-# -	Big-O for lookup:
-# -	Implementation link:
-# -	Example use:
-
-
-# Algorithms (give implementation links)
-# •	Trees
-# -	Preorder traversal:
-# -	Inorder traversal:
-# -	Postorder traversal
-
-# •	Sorting
-# -	Insertion sort
-# -	Selection sort
-# -	Quick sort
-# -	Merge sort
-# -	Bubble sort
-
-# •	Graphs
-# -	A* Search (CS 4700)
-# -	Dijkstra’s
-# -	BFS (when to use BFS over DFS – CS 4700)
-#   	Include recursive and non-recursive implementations
-# -	DFS (when to use DFS over BFS)
-#   	Include recursive and non-recursive implementations
-
-
-# Miscellaneous (can be done after leetcode)
-# -	What is amortized constant-time?
-# -	What is HTTP?
-# -	How do sockets work?
-# -	What is IP?
-# -	What are the networking layers?
+# •	Binary Search Tree Description: A binary tree data structure that has a 
+#   property that from a given node, every node with a value less than that node 
+#   is in the left child, and every node with a value greater than that node is 
+#   in the right child.
+# -	Big-O for insert: O(log n)
+# -	Big-O for delete: O(log n)
+# -	Big-O for lookup: O(log n)
+#   Preorder: processing the root before the two children 
+#   Inorder: processing the left child, the root, then the right child
+#   Postorder: processing the children than the root node
+# -	Implementation link (include insert and delete): BST.py (TODO - Delete)
+# -	Example use: Wanting a data structure to keep things in a sorted order
 
 
 
