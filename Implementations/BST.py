@@ -13,7 +13,7 @@ class BSTNode(object):
     - self.count: the number of times this node is in the BST (an int)
     - self.parent: the parent of this Node (a BSTNode or None if the root)
   """
-  def __init__(self, value):
+  def __init__(self, value, parent = None):
     """
     Initializes a BSTNode.
 
@@ -28,6 +28,7 @@ class BSTNode(object):
     self.left = None 
     self.right = None
     self.count = 1
+    self.parent = parent
   
   def get_value(self):
     """
@@ -52,13 +53,13 @@ class BSTNode(object):
       return self.count
     if value < self.value:
       if self.left == None:
-        self.left = BSTNode(value)
+        self.left = BSTNode(value, self)
         return 1
       else:
         return self.left.insert(value) 
     else:
       if self.right == None:
-        self.right = BSTNode(value)
+        self.right = BSTNode(value, self)
         return 1
       else:
         return self.right.insert(value) 
@@ -128,6 +129,26 @@ class BSTNode(object):
         self.right.inorder(arr)
     return arr
 
+  def delete(self, value, force_delete, root) -> int:
+    """
+    Deletes the node with value from the Binary Search Tree
+
+    This function calls the find method to get the node to delete. It then 
+    removes the ndoe from the tree. If the node was inserted twice, it won't be 
+    deleted.
+
+    Parameter value: the value to insert 
+    Precondition: value is an int 
+
+    Parameter force_delete: whether or not to remove the node if the count is
+                            not 0
+    Precondition: force_delete is a bool
+
+    Returns: the number of times the node was inserted into the tree before 
+    deleting
+    """
+    pass
+
   def postorder(self, arr) -> list:
     """
     Gives the postorder traversal of this node
@@ -170,7 +191,7 @@ class BinarySearchTree(object):
     if root_value is None:
       self.root = None
     else: 
-      self.root = BSTNode(root_value) 
+      self.root = BSTNode(root_value, None) 
 
   def insert(self, value : int) -> int:
     """
@@ -228,5 +249,24 @@ class BinarySearchTree(object):
     returns a list with that traversal pattern.
     """
     return self.root.postorder([]) 
+
+  def delete(self, value : int, force_delete : bool = False) -> int:
+    """
+    Deletes the node with value from the Binary Search Tree
+
+    This function calls the delete function for the root node.
+
+    Parameter value: the value to insert 
+    Precondition: value is an int 
+
+    Parameter force_delete: whether or not to remove the node if the count is
+                            not 0
+    Precondition: force_delete is a bool
+
+    Returns: the number of times the value was inserted into the tree before 
+    deleting it (0 if the value was not in the tree)
+    """
+    count = self.root.delete(value, force_delete, self.root)
+    return count
 
     
