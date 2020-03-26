@@ -28,7 +28,13 @@ class LinkedListNode(object):
         """
         self.data = data
         self.next = None
-
+    
+    def getData(self):
+        """
+        Returns: the data in this LinkedListNode
+        """
+        return self.data
+    
     def setNextNode(self, node):
         """
         Sets the next node to be node

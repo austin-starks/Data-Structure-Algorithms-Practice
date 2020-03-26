@@ -17,7 +17,7 @@ class Node(object):
         This Node stores data and also the next node
         
         Class invariants: 
-            - self._data:     the data to store in the LinkedList 
+            - self.data:     the data to store in the LinkedList 
             - self._nextNode: the Node this Node points to
         """
         pass
@@ -26,13 +26,6 @@ class Node(object):
     def getData(self):
         """
         Returns: the data in this LinkedListNode
-        """
-        pass
-
-    
-    def getNextNode(self):
-        """
-        Returns: the node stored in the next node.
         """
         pass
 
