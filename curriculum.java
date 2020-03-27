@@ -4,14 +4,16 @@
 // -	Big-O for delete: O(n)
 // -	Big-O for lookup: O(1) (O(n) to find the data point, but O(1) if you know index)
 // -	Example use: To implement a matrix
-//    Implementation link: 
 
-// •	Heap Description:
-// -	Big-O for insert:
-// -	Big-O for delete:
-// -	Big-O for lookup:
-// -	Example use:
-// -	Implementation link:
+// •	Heap Description: A complete tree that maintains the "heap" property: that is for a
+//		given node, every child node is less than the node (for a min heap).
+//		They are used to implement priority queues and efficient removal of a higher priority
+// -	Big-O for insert: O(1)
+// -	Big-O for delete: O(log n)
+// -	Big-O for lookup: O(n)
+// -	Example use: To implement Dijakastra's Algorithm, Prim's algorithm, and to quickly
+//		find the largest/smallest element of an array
+// -	Implementation link: Heap.java
 
 // •	Hash Table/Hash Set Description:
 // -	Big-O for insert:
@@ -27,7 +29,6 @@
 // -	Big-O for lookup:
 // -	Example use:
 // -	Implementation link:
-
 
 // Algorithms (give implementation links)
 // •	Trees
@@ -49,7 +50,6 @@
 //   	Include recursive and non-recursive implementations
 // -	DFS (when to use DFS over BFS)
 //   	Include recursive and non-recursive implementations
-
 
 // Miscellaneous (can be done after leetcode)
 // -	What is amortized constant-time?
