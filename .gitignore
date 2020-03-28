@@ -2,7 +2,8 @@ __pycache__
 /Implementations_test.class
 .project
 /arrays.class
-/Heap.class
-/MinHeap.class
+implementations_java/MinHeap.class
 /Implementations_test.class
+implementations_java/MaxHeap.class
 .classpath
+implementations_java/Heap.class

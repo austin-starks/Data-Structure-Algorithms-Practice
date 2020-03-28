@@ -134,7 +134,7 @@ abstract class Heap {
 			int item= items[0];
 			size-- ;
 			items[0]= items[size];
-			heapifyDown();
+			bubbleDown();
 			return item;
 		}
 	}
@@ -146,7 +146,7 @@ abstract class Heap {
 		ensureSpace();
 		items[size]= num;
 		size++ ;
-		heapifyUp();
+		bubbleUp();
 	}
 
 	/** Returns an array representation of this heap
@@ -178,11 +178,29 @@ abstract class Heap {
 		return left && right;
 	}
 
-	public static boolean checkMaxHeap() {
-		return false;
+	/** Checks to see if the array arr represents a max heap
+	 *
+	 * This function recursively checks to see if the input array is a valid max heap.
+	 *
+	 * @param arr the array to check
+	 * @return true if the array is a min-heap. False otherwise */
+	public static boolean checkMaxHeap(int[] arr) {
+		boolean result= checkMaxHeap(arr, 0);
+		return result;
 	}
 
-	abstract void heapifyUp();
+	private static boolean checkMaxHeap(int[] arr, int index) {
+		// if this index doesn't have a right child... it's a leaf node.
+		if (getRightChildIndex(index) >= arr.length) { return true; }
 
-	abstract void heapifyDown();
+		// otherwise, recursively check if the left and right children
+		// are heaps
+		boolean left= arr[index] >= arr[getLeftChildIndex(index)] && checkMaxHeap(arr, getLeftChildIndex(index));
+		boolean right= arr[index] >= arr[getRightChildIndex(index)] && checkMaxHeap(arr, getRightChildIndex(index));
+		return left && right;
+	}
+
+	abstract void bubbleUp();
+
+	abstract void bubbleDown();
 }
