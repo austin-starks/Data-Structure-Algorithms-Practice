@@ -4,6 +4,7 @@
 // -	Big-O for delete: O(n)
 // -	Big-O for lookup: O(1) (O(n) to find the data point, but O(1) if you know index)
 // -	Example use: To implement a matrix
+// - 	Implementation Link: Heaps are implemented with a resizable array in Heap.java
 
 // •	Heap Description: A complete tree that maintains the "heap" property: that is for a
 //		given node, every child node is less than the node (for a min heap).
@@ -14,13 +15,15 @@
 // - 	Big-O for peek: O(1)
 // -	Example use: To implement Dijakastra's Algorithm, Prim's algorithm, and to quickly
 //		find the largest/smallest element of an array
-// -	Implementation link: Heap.java
+// -	Implementation link: Heap.java, MinHeap.java, MaxHeap.java
 
 // •	Hash Table/Hash Set Description:
 // -	Big-O for insert:
 // -	Big-O for delete:
 // -	Big-O for lookup:
-// -	The collision methods are:
+// -	The collision methods are: Linear probing, quadratic probing, and chaining
+//		Load factor: # of entries/length of array. When the load factor is too large,
+//		it is too slow. When it's too large, it is too slow.
 // -	Example use:
 // -	Implementation link:
 
@@ -32,11 +35,6 @@
 // -	Implementation link:
 
 // Algorithms (give implementation links)
-// •	Trees
-// -	Preorder traversal:
-// -	Inorder traversal:
-// -	Postorder traversal
-
 // •	Sorting
 // -	Insertion sort
 // -	Selection sort

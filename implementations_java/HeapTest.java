@@ -1,13 +1,13 @@
 package implementations_java;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-class Implementations_test {
+class HeapTest {
 
 	@Test
 	void min_heap_test() {
